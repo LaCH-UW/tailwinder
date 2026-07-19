@@ -10,7 +10,7 @@ Add to your `.pre-commit-config.yaml`:
 
 ```yaml
 -   repo: https://github.com/LaCH-UW/tailwinder
-    rev: 1.4.1.18
+    rev: 2.4.3.3
     hooks:
     -   id: tailwinder
         args: ["-o", "path/to/output.css", "--minify"]

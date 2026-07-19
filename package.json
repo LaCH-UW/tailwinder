@@ -1,6 +1,6 @@
 {
   "name": "tailwinder",
-  "version": "1.4.1.18",
+  "version": "2.4.3.3",
   "bin": {
     "tailwinder": "bin/do_compile.sh"
   },
