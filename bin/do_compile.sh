@@ -5,6 +5,10 @@ args=("$@")
 # parse args to grab output file
 while [[ $# -gt 0 ]]; do
     case $1 in
+    -i|--input)
+        shift
+        INPUT_FILE="$1"
+        ;;
     -o|--output)
         shift
         OUTPUT_FILE="$1"
@@ -27,6 +31,9 @@ fi
 
 if [ -n "${CWD}" ]; then
     OUTPUT_FILE="${CWD}/${OUTPUT_FILE}"
+    if [ -n "${INPUT_FILE}" ]; then
+        INPUT_FILE="${CWD}/${INPUT_FILE}"
+    fi
 fi
 
 OUTPUT_FILE_MD5=""
