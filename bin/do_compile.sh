@@ -31,9 +31,6 @@ fi
 
 if [ -n "${CWD}" ]; then
     OUTPUT_FILE="${CWD}/${OUTPUT_FILE}"
-    if [ -n "${INPUT_FILE}" ]; then
-        INPUT_FILE="${CWD}/${INPUT_FILE}"
-    fi
 fi
 
 OUTPUT_FILE_MD5=""
