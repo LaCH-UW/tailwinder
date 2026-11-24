@@ -10,10 +10,12 @@ Add to your `.pre-commit-config.yaml`:
 
 ```yaml
 -   repo: https://github.com/LaCH-UW/tailwinder
-    rev: 2.4.3.3
+    rev: 3.4.3.3
     hooks:
     -   id: tailwinder
-        args: ["-o", "path/to/output.css", "--minify"]
+        args: ["-i", "path/to/input.css", "-o", "path/to/output.css", "--minify"]
 ```
-or skip `--minify` to keep the output unminified. All the args are passed directly to the Tailwind CLI. Do not use
-`--watch`, though, as it does not make sense in the context of a pre-commit hook.
+
+Use `-i` (or `--input`) to specify the input CSS file and `-o` (or `--output`) for the compiled output.
+Skip `--minify` to keep the output unminified. All other args are passed directly to the Tailwind CLI.
+Do not use `--watch`, as it does not make sense in the context of a pre-commit hook.

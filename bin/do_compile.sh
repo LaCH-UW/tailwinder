@@ -5,6 +5,10 @@ args=("$@")
 # parse args to grab output file
 while [[ $# -gt 0 ]]; do
     case $1 in
+    -i|--input)
+        shift
+        INPUT_FILE="$1"
+        ;;
     -o|--output)
         shift
         OUTPUT_FILE="$1"
